@@ -4,9 +4,9 @@ require_relative "receipt_printer/cli"
 
 module ReceiptPrinter
   def self.print_receipt(items)
-    sales_taxes = items.map(&:sales_tax).inject(:+)
+    sales_taxes = items.map(&:sales_tax).inject(:+) || 0.0
 
-    total = items.map(&:total).inject(:+)
+    total = items.map(&:total).inject(:+) || 0.0
 
     items.each do |item|
       puts item
