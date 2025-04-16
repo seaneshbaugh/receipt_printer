@@ -46,3 +46,9 @@ The program will always return an exit code 0, regardless of invalid lines _unle
 Tests can be run with the following command:
 
     $ rake test
+
+## Linting
+
+Run Rubocop with the following command:
+
+    $ bundle exec rubocop

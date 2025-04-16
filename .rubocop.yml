@@ -1,0 +1,18 @@
+plugins:
+  - rubocop-minitest
+
+AllCops:
+  NewCops: enable
+
+Metrics/BlockLength:
+  AllowedMethods:
+    - describe
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
