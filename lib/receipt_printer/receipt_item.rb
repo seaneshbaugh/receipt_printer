@@ -31,11 +31,11 @@ module ReceiptPrinter
     end
 
     def to_s
-      "#{@quantity} #{@imported ? "imported " : ""}#{@name}: #{total}"
+      "#{@quantity} #{@imported ? "imported " : ""}#{@name}: #{sprintf("%.2f", total)}"
     end
 
     def total
-      @price * @quantity + sales_tax
+      (@price * @quantity + sales_tax).round(2)
     end
   end
 end

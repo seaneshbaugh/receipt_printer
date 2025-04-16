@@ -43,7 +43,7 @@ module ReceiptPrinter
 
     private
 
-    # TODO: Consider moving this into its own Categorizer class?
+    # Consider moving this into its own Categorizer class?
     def categorize(name)
       ITEM_CATEGORIES.each do |category, examples|
         return category if examples.any? { |example| name.match?(example) }
