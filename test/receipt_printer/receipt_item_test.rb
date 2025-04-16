@@ -16,4 +16,12 @@ describe ReceiptPrinter::ReceiptItem do
       _(receipt_item.sales_tax).must_equal 0.0
     end
   end
+
+  describe "imported items" do
+    it "calculates the sales tax" do
+      receipt_item = ReceiptPrinter::ReceiptItem.new("chocolate bar", "food", 1, 1.0, true)
+
+      _(receipt_item.sales_tax).must_equal 0.05
+    end
+  end
 end
