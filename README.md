@@ -7,7 +7,7 @@ Simple command line program that takes list of purchased items, calculates sales
 
 The program can be run with the following command:
 
-    $ bin/receipt_printer \<purchase_file>
+    $ bin/receipt_printer <purchase_file>
 
 #### Input
 
