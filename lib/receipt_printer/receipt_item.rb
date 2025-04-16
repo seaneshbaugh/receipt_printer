@@ -1,6 +1,6 @@
 module ReceiptPrinter
   class ReceiptItem
-    TAX_EXEMPT_TYPES = %w[book food medical]
+    TAX_EXEMPT_TYPES = %w[book food medical].freeze
     SALES_TAX_RATE = 0.10
     IMPORT_DUTY_RATE = 0.05
 
@@ -31,11 +31,11 @@ module ReceiptPrinter
     end
 
     def to_s
-      "#{@quantity} #{@imported ? "imported " : ""}#{@name}: #{sprintf("%.2f", total)}"
+      "#{@quantity} #{@imported ? 'imported ' : ''}#{@name}: #{format('%.2f', total)}"
     end
 
     def total
-      (@price * @quantity + sales_tax).round(2)
+      ((@price * @quantity) + sales_tax).round(2)
     end
   end
 end

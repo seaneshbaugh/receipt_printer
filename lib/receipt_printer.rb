@@ -12,8 +12,8 @@ module ReceiptPrinter
       puts item
     end
 
-    puts "Sales Taxes: #{sprintf("%.2f", sales_taxes)}"
+    puts "Sales Taxes: #{format('%.2f', sales_taxes)}"
 
-    puts "Total: #{sprintf("%.2f", total)}"
+    puts "Total: #{format('%.2f', total)}"
   end
 end
