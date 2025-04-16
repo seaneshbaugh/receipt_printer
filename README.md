@@ -1,4 +1,4 @@
-# Receipt Printe
+# Receipt Printer
 
 Simple command line program that takes list of purchased items, calculates sales tax, and then prints a receipt.
 
